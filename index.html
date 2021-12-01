@@ -1,167 +1,339 @@
-.Lovely, .lead {
-    font-family: 'Courier New', monospace;
-}
-.jumbotron {
-    padding-top: 5rem;
-    background-color: #FF9000;
-    position: fixer;
-    width: 500;
-    height: 1000;
-    font-family: 'Brush Script MT', cursive;
-    font-size: 10px;
-}
-#scrollspyHeading2 {
-    background-color: #FF9000;
-    position: fixer;
-    width: 500;
-    height: 700;
-    padding-top: 3rem;
-    padding-bottom: 4rem;
-}
-.about, #scrollspyHeading3 {
-    padding-top: 2rem;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kitou Akariku Melebihi Jagat Raya</title>
+    <!-- My CSS -->
+    <link rel="stylesheet" href="gaya.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/fadec2ae3f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="Lovely">
+    <!-- Awal Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark shadow-sm"
+      style="background-color: #ff9000"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Akarin</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link active fw-bold"
+                aria-current="page"
+                href="#scrollspyHeading1"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="#scrollspyHeading2"
+                >Photobook</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="#scrollspyHeading3"
+                >VaRole</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html{
-  scroll-behavior: smooth;
-}
-body{
-  background: #FF9000;
-}
-::selection{
-  color: #fff;
-  background: #FF9000;
-}
-.wrapper{
-  max-width: 1080px;
-  margin: 50px auto;
-  padding: 0 20px;
-  position: relative;
-}
-.wrapper .center-line{
-  position: absolute;
-  height: 100%;
-  width: 4px;
-  background: #FF9000;
-  left: 50%;
-  top: 20px;
-  transform: translateX(-50%);
-}
-.wrapper .row{
-  display: flex;
-}
-.wrapper .row-1{
-  justify-content: flex-start;
-}
-.wrapper .row-2{
-  justify-content: flex-end;
-}
-.wrapper .row section{
-  background: #FF9000;
-  border-radius: 5px;
-  width: calc(50% - 40px);
-  padding: 20px;
-  position: relative;
-}
-.wrapper .row section::before{
-  position: absolute;
-  content: "";
-  height: 15px;
-  width: 15px;
-  background: #fff;
-  top: 28px;
-  z-index: -1;
-  transform: rotate(45deg);
-}
-.row-1 section::before{
-  right: -7px;
-}
-.row-2 section::before{
-  left: -7px;
-}
-.row section .icon,
-.center-line .scroll-icon{
-  position: absolute;
-  background: #f2f2f2;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  color: #FF9000;
-  font-size: 17px;
-  box-shadow: 0 0 0 4px #FF9000, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
-}
-.center-line .scroll-icon{
-  bottom: 0px;
-  left: 50%;
-  font-size: 25px;
-  transform: translateX(-50%);
-}
-.row-1 section .icon{
-  top: 15px;
-  right: -60px;
-}
-.row-2 section .icon{
-  top: 15px;
-  left: -60px;
-}
-.row section .details,
-.row section .bottom{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.row section .details .title{
-  font-size: 22px;
-  font-weight: 600;
-}
-.row section p{
-  margin: 10px 0 17px 0;
-}
-.row section .bottom a{
-  text-decoration: none;
-  background: #FFF;
-  color: #fff;
-  padding: 7px 15px;
-  border-radius: 5px;
-  /* font-size: 17px; */
-  font-weight: 400;
-  transition: all 0.3s ease;
-}
-.row section .bottom a:hover{
-  transform: scale(0.97);
-}
-@media(max-width: 790px){
-  .wrapper .center-line{
-    left: 40px;
-  }
-  .wrapper .row{
-    margin: 30px 0 3px 60px;
-  }
-  .wrapper .row section{
-    width: 100%;
-  }
-  .row-1 section::before{
-    left: -7px;
-  }
-  .row-1 section .icon{
-    left: -60px;
-  }
-}
-@media(max-width: 440px){
-  .wrapper .center-line,
-  .row section::before,
-  .row section .icon{
-    display: none;
-  }
-  .wrapper .row{
-    margin: 10px 0;
-  }
-}
+    <!-- Jumbotron -->
+    <section class="jumbotron text-center">
+      <img
+        src="assets/images/Akari.jpg"
+        alt="Bebebku"
+        width="200"
+        style="position: center; bottom: "
+        class="rounded-circle"
+      />
+      <h1 class="display-4" style="color: white">— Kitou Akari —</h1>
+      <p class="lead" style="color: white">My Favorite Voice Actor</p>
+      <a href="https://twitter.com/kitoakari_1016"
+        ><i class="fa-3x fab fa-twitter text-white px-2"></i
+      ></a>
+      <a href="https://www.instagram.com/kitoakari_staff/"
+        ><i class="fa-3x fab fa-instagram text-white px-2"></i
+      ></a>
+      <a href="https://www.youtube.com/channel/UCU_E2DHcyQu-Toohyd1vzRw"
+        ><i class="fa-3x fab fa-youtube text-white px-2"></i
+      ></a>
+      <a href="http://www.pro-fit.co.jp/talent_kito.html"
+        ><i class="fa-3x fab fa-chrome text-white px-2"></i
+      ></a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="4"
+          d="M0,192L34.3,208C68.6,224,137,256,206,277.3C274.3,299,343,309,411,304C480,299,549,277,617,229.3C685.7,181,754,107,823,112C891.4,117,960,203,1029,234.7C1097.1,267,1166,245,1234,229.3C1302.9,213,1371,203,1406,197.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- Akhir Jumbotron -->
+
+    <!-- About -->
+    <section class="about">
+      <div class="container py-7">
+        <div class="row text-center py-3">
+          <div class="col">
+            <h1 id="scrollspyHeading1">About her</h1>
+          </div>
+        </div>
+        <div class="row py-3">
+          <div
+            class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <img
+              src="assets/images/Akarin.png"
+              class="d-block w-100"
+              alt="Hello!"
+            />
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <p><strong>Full Name : </strong>Kitou Akari</p>
+            <p><strong>Phone : </strong>Lorem ipsum dolor sit.</p>
+            <p><strong>Email : </strong>Lorem ipsum dolor sit.</p>
+            <p><strong>Website : </strong>Lorem, ipsum dolor.</p>
+            <p>
+              <strong>Address : </strong>Lorem ipsum dolor sit amet consectetur.
+            </p>
+
+            <h2>Profile</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+              id eum, molestiae vero at voluptatem ipsum eveniet cupiditate
+              praesentium consectetur. Minima quam quas aliquam nostrum suscipit
+              quod dolor voluptate eum deleniti non, impedit voluptates, vel
+              aspernatur! Ad labore accusamus esse beatae obcaecati hic alias
+              fugit, facere provident tempora iure animi assumenda. Dignissimos,
+              ex veniam deserunt fugit quibusdam minus ipsum distinctio!
+            </p>
+            <a href="https://twitter.com/kitoakari_1016"
+              ><i class="fa-2x fab fa-twitter text-black px-1"></i
+            ></a>
+            <a href="https://www.instagram.com/kitoakari_staff/"
+              ><i class="fa-2x fab fa-instagram text-black px-1"></i
+            ></a>
+            <a href="https://www.youtube.com/channel/UCU_E2DHcyQu-Toohyd1vzRw"
+              ><i class="fa-2x fab fa-youtube text-black px-1"></i
+            ></a>
+            <a href="http://www.pro-fit.co.jp/talent_kito.html"
+              ><i class="fa-2x fab fa-chrome text-black px-1"></i
+            ></a>
+          </div>
+        </div>
+        <div class="row justify-content-center py-3"></div>
+      </div>
+    </section>
+    <!-- Akhir About -->
+
+    <!-- Photobook Akarin -->
+    <section id="scrollspyHeading2">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center text-white">
+            <h2 style="padding-bottom: 3rem">Photobook</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="card">
+              <img
+                src="assets/images/card3.jpg"
+                class="card-img-top"
+                alt="Akarin1"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="card">
+              <img
+                src="assets/images/card4.jpg"
+                class="card-img-top"
+                alt="Akarin2"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-0 col-lg-4 mb-3">
+            <div class="card">
+              <img
+                src="assets/images/card5.jpg"
+                class="card-img-top"
+                alt="Akarin2"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="card">
+              <img
+                src="assets/images/card1.jpg"
+                class="card-img-top"
+                alt="Akarin4"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="card">
+              <img
+                src="assets/images/card2.jpg"
+                class="card-img-top"
+                alt="Akarin5"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Photobook -->
+
+    <!-- Timeline -->
+    <h2 id="scrollspyHeading3" style="text-align: center">
+      Voice Acting Roles
+    </h2>
+    <div class="wrapper text-white">
+      <div class="center-line">
+        <a href="#" class="scroll-icon"><i class="fas fa-caret-up"></i></a>
+      </div>
+      <div class="row row-1">
+        <section>
+          <i class="icon fas fa-microphone"></i>
+          <div class="details">
+            <span class="title">As Nezuko Kamado in Demon Slayer</span>
+          </div>
+          <p>
+            Nezuko Kamado is the younger sister of Tanjiro Kamado, supposedly
+            turned into a demon by Muzan Kibutsuji. She debuts from the start of
+            the Kimetsu no Yaiba (Demon Slayer) manga and anime series as one of
+            the main protagonists.
+          </p>
+        </section>
+      </div>
+      <div class="row row-2">
+        <section>
+          <i class="icon fas fa-microphone"></i>
+          <div class="details">
+            <span class="title">As Tsukasa Yuzaki in Fly me to the Moon</span>
+          </div>
+          <p>
+            Nasa Yuzaki's wife. She saved Nasa from getting hit by a truck
+            during a snowy night, and he confessed to her at that moment, taken
+            aback by her beauty. Tsukasa agreed to go out with Nasa on the
+            condition that they get married.
+          </p>
+        </section>
+      </div>
+      <div class="row row-1">
+        <section>
+          <i class="icon fas fa-microphone"></i>
+          <div class="details">
+            <span class="title">As Hinata Kaho in Blend S</span>
+          </div>
+          <p>
+            Kaho is a 17-year-old waitress who fulfills the tsundere trait. She
+            loves playing video games and often goes to an arcade, but often
+            runs out of money because of it. Although she plays a tsundere girl,
+            Kaho's real personality is not tsundere and like Maika has to learn
+            to become one. She is currently the most popular waitress at Stile.
+          </p>
+        </section>
+      </div>
+      <div class="row row-2">
+        <section>
+          <i class="icon fas fa-microphone"></i>
+          <div class="details">
+            <span class="title"
+              >As Horikita Suzune in Classroom of the Elite
+            </span>
+          </div>
+          <p>
+            A beautiful girl who sits next to Ayanokouji. She is the opposite of
+            Ayanokouji when it comes to friendship; she disregards it and thinks
+            of making friends unnecessary, thus she does not communicate much
+            with her classmates. She is not convinced that she was placed in the
+            D class, therefore she aims to get promoted to the A class.
+          </p>
+        </section>
+      </div>
+      <div class="row row-1">
+        <section>
+          <i class="icon fas fa-microphone"></i>
+          <div class="details">
+            <span class="title">As Himesaka Noa in Wataten</span>
+          </div>
+          <p>
+            Hana and Hinata's classmate who moves next door to Miyako and
+            Hinata. She constantly sees herself as cute, often becoming
+            downhearted when someone else, usually Hana, is said to be cuter.
+          </p>
+        </section>
+      </div>
+      <div class="row row-2">
+        <section>
+          <i class="icon fas fa-microphone"></i>
+          <div class="details">
+            <span class="title">As Iwanaga Kotoko in In/Spectre</span>
+          </div>
+          <p>
+            Kotoko is the main female protagonist in Kyokou Suiri (In/Spectre)
+            and the current girlfriend of Kuro Sakuragawa. She is known as the
+            "Goddess of Wisdom.“
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <!-- Akhir Timeline -->
+
+    <!-- Footer -->
+    <footer class="text-white" style="background-color: #ff9000">
+      <div class="container p-3">
+        <div class="row">
+          <d>
+            <p class="text-center">
+              Created with <i class="fas fa-heart"></i> by
+              <a href="#" class="text-white fw-bold">Irfan Maulana</a>
+            </p>
+          </d>
+        </div>
+      </div>
+    </footer>
+    <!-- Akhir Footer -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
