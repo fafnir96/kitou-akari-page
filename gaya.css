@@ -19,8 +19,7 @@
     padding-bottom: 4rem;
 }
 .about, #scrollspyHeading3 {
-    padding-top: 4rem;
-    padding-bottom: 5rem;
+    padding-top: 2rem;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -37,7 +36,7 @@ body{
 }
 ::selection{
   color: #fff;
-  background: #0037ff;
+  background: #E02401;
 }
 .wrapper{
   max-width: 1080px;
